@@ -33,9 +33,13 @@ export default {
         .catch((err)=>console.log(err))
     },
     toggleComplete(){
-      console.log("Hello")
+           fetch(this.uri, {
+             method:"PATCH",
+             headers:{'Content-Type' :'application/json'},
+             body:JSON.stringify({completed: !this.project.complete})
+           })
     }
-  },
+  }
 };
 </script>
 
