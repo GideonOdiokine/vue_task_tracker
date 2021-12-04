@@ -1,5 +1,5 @@
 <template>
-  <div class="project">
+  <div class="project" :class="{completed: project.completed}">
     <div class="action">
       <h3 @click="toggleDetails">{{ project.title }}</h3>
       <div class="icons">
@@ -36,10 +36,10 @@ export default {
            fetch(this.uri, {
              method:"PATCH",
              headers:{'Content-Type' :'application/json'},
-             body:JSON.stringify({completed: !this.project.complete})
+             body:JSON.stringify({completed: !this.project.completed})
            }).then(()=>{
-             this.$emit('complete', this.project.id)
-           })
+             this.$emit('completed', this.project.id)
+           }).catch((err)=> console.log(err))
     }
   }
 };
@@ -53,6 +53,9 @@ export default {
   border-radius: 4px;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
   border-left: 4px solid #e90074;
+}
+.project.completed{
+    border-left: 4px solid green;
 }
 h3 {
   cursor: pointer;
