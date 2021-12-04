@@ -2,7 +2,11 @@
   <div class="home">
     <div v-if="projects.length">
       <div v-for="project in projects" :key="project.id">
-        <SingleProject @delete="handleDelete" @complete="handleComplete" :project="project" />
+        <SingleProject
+          @delete="handleDelete"
+          @completed="handleComplete"
+          :project="project"
+        />
       </div>
     </div>
   </div>
@@ -25,18 +29,18 @@ export default {
       .then((data) => (this.projects = data))
       .catch((err) => console.log(err.message));
   },
-  methods:{
+  methods: {
     handleDelete(id) {
-      this.projects= this.projects.filter((project)=>{
-        return project.id !== id
-      })
+      this.projects = this.projects.filter((project) => {
+        return project.id !== id;
+      });
     },
     handleComplete(id) {
-      let p = this.projects.find(project=>{
-        return project.id === id 
-      }) 
-      p.completed = !p.completed
-    }
-  }
+      let p = this.projects.find((project) => {
+        return project.id === id;
+      });
+      p.completed = !p.completed;
+    },
+  },
 };
 </script>

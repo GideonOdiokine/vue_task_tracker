@@ -39,7 +39,7 @@ export default {
         body: JSON.stringify({ completed: !this.project.completed }),
       })
         .then(() => {
-          this.$emit("complete", this.project.id);
+          this.$emit("completed", this.project.id);
         })
         .catch((err) => console.log(err));
     },
