@@ -1,5 +1,5 @@
 <template>
-  <div class="project" :class="{completed: project.completed}">
+  <div class="project" :class="{ completed: project.completed }">
     <div class="action">
       <h3 @click="toggleDetails">{{ project.title }}</h3>
       <div class="icons">
@@ -20,28 +20,28 @@ export default {
   data() {
     return {
       showDetails: false,
-      uri:`http://localhost:3000/projects/${this.project.id}`
+      uri: `http://localhost:3000/projects/${this.project.id}`,
     };
   },
   methods: {
     toggleDetails() {
       this.showDetails = !this.showDetails;
     },
-    deleteProject(){
-        fetch(this.uri, {method:"DELETE"})
-        .then(()=> this.$emit('delete', this.project.id))
-        .catch((err)=>console.log(err));
+    deleteProject() {
+      fetch(this.uri, { method: "DELETE" })
+        .then(() => this.$emit("delete", this.project.id))
+        .catch((err) => console.log(err));
     },
-    toggleComplete(){
-           fetch(this.uri, {
-             method:"PATCH",
-             headers:{'Content-Type' :'application/json'},
-             body:JSON.stringify({completed: !this.project.completed})
-           }).then(()=>{
-             this.$emit('completed', this.project.id)
-           }).catch((err)=> console.log(err))
-    }
-  }
+    toggleComplete() {
+      fetch(this.uri, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ completed: !this.project.completed }),
+      })
+        .then(() => this.$emit("complete", this.project.id))
+        .catch((err) => console.log(err));
+    },
+  },
 };
 </script>
 
@@ -54,8 +54,8 @@ export default {
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
   border-left: 4px solid #e90074;
 }
-.project.completed{
-    border-left: 4px solid green;
+.project.completed {
+  border-left: 4px solid green;
 }
 h3 {
   cursor: pointer;
