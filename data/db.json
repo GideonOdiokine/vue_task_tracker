@@ -7,10 +7,16 @@
       "completed": false
     },
     {
-      "id": 3,
+      "id": 2,
       "title": "Create new homepage banner",
       "details": "Lorem ipsum",
       "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Create new homepage banner",
+      "details": "Lorem ipsum",
+      "completed": false
     }
   ]
 }

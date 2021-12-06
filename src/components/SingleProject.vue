@@ -38,7 +38,9 @@ export default {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ completed: !this.project.completed }),
       })
-        .then(() => this.$emit("complete", this.project.id))
+        .then(() => {
+          this.$emit("complete", this.project.id);
+        })
         .catch((err) => console.log(err));
     },
   },
