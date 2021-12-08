@@ -1,22 +1,21 @@
 <template>
   <form>
-      <label>Title: </label>
-      <input type="text" required >
+    <label>Title: </label>
+    <input type="text" required />
     <label>Details: </label>
     <textarea required> </textarea>
- </form>
+  </form>
 </template>
 
 <script>
 export default {
- data(){
-     return {
-     title:'',
-     details:''
- }
-}
+  data() {
+    return {
+      title: "",
+      details: "",
+    };
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
