@@ -1,5 +1,6 @@
 <template>
   <router-view />
+  <router-link :to="{ name: 'AddProject' }">Add</router-link>
 </template>
 
 <style>

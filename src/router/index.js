@@ -6,6 +6,11 @@ const routes = [
     ath: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    ath: '/add',
+    name: 'AddProject',
+    component: AddProject
   }
 ]
 
