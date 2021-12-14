@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     handleSubmit() {
-      console.log("hellow");
+      console.log("hello world");
     },
   },
 };
@@ -61,7 +61,7 @@ form button {
   padding: 10px;
   border: 0;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
 }
 </style>
