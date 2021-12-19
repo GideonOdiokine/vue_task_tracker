@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     handleSubmit() {
-      console.log("hello 44 world");
+      console.log("hello 4 world");
     },
   },
 };
