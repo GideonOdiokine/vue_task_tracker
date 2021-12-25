@@ -20,7 +20,7 @@ export default {
     handleSubmit() {
       let project = {
         title: this.title,
-        desc: this.details,
+        details: this.details,
         completed: false,
       };
 
@@ -28,9 +28,11 @@ export default {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(project),
-      }).then(() => {
-        this.$router.push("/");
-      }).catch((err)=>console.log(err))
+      })
+        .then(() => {
+          this.$router.push("/");
+        })
+        .catch((err) => console.log(err));
     },
   },
 };

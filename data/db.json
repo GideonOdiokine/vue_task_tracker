@@ -11,6 +11,12 @@
       "title": "Create new homepage banner",
       "details": "Lorem ipsum",
       "completed": false
+    },
+    {
+      "title": "design new web page",
+      "details": "Lorem ipsum is not cool",
+      "completed": false,
+      "id": 3
     }
   ]
 }
