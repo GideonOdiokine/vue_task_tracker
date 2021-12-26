@@ -10,10 +10,10 @@ export default {};
 </script>
 
 <style>
-/* .main-nav {
+.main-nav {
   text-align: center;
   margin: 40px auto;
-} */
+}
 .main-nav a {
   display: inline-block;
   text-decoration: none;
