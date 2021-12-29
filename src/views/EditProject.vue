@@ -10,11 +10,17 @@
 
 <script>
 export default {
+  props: ["id"],
   data() {
     return {
       title: "",
       details: "",
     };
+  },
+  methods: {
+    handleUpdate() {
+      console.log("Yes");
+    },
   },
 };
 </script>
