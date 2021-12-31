@@ -7,15 +7,13 @@
       "completed": false
     },
     {
-      "id": 2,
       "title": "Create new homepage banner",
-      "details": "Lorem ipsum",
-      "completed": false
+      "details": "Lorem ipsumi",
+      "id": 2
     },
     {
-      "title": "design new web page",
-      "details": "Lorem ipsum is not cool",
-      "completed": false,
+      "title": "design new web",
+      "details": "Lorem ipsum is cool",
       "id": 3
     }
   ]

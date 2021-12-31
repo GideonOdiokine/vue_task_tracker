@@ -15,11 +15,30 @@ export default {
     return {
       title: "",
       details: "",
+      uri: `http://localhost:3000/projects/${this.id}`,
     };
+  },
+  mounted() {
+    fetch(this.uri)
+      .then((res) => res.json())
+      .then((data) => {
+        this.title = data.title;
+        this.details = data.details;
+      });
   },
   methods: {
     handleUpdate() {
-      console.log("Yes");
+      let project = {
+        title: this.title,
+        details: this.details,
+      };
+      fetch(this.uri, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(project),
+      }).then(() => {
+        this.$router.push("/");
+      });
     },
   },
 };
