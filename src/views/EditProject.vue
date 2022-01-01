@@ -33,12 +33,14 @@ export default {
         details: this.details,
       };
       fetch(this.uri, {
-        method: "PUT",
+        method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(project),
-      }).then(() => {
-        this.$router.push("/");
-      }).catch((err)=>console.log(err))
+      })
+        .then(() => {
+          this.$router.push("/");
+        })
+        .catch((err) => console.log(err));
     },
   },
 };

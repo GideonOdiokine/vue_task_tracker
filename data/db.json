@@ -4,16 +4,18 @@
       "id": 1,
       "title": "Create new homepage banner",
       "details": "Lorem ipsum",
+      "completed": true
+    },
+    {
+      "title": "Create new homepage banner and flyers",
+      "details": "Lorem ips",
+      "id": 2,
       "completed": false
     },
     {
-      "title": "Create new homepage banner",
-      "details": "Lorem ipsumi",
-      "id": 2
-    },
-    {
-      "title": "design new web",
-      "details": "Lorem ipsum is cool",
+      "title": "Meet Favor and John",
+      "details": "Ask out ",
+      "completed": false,
       "id": 3
     }
   ]
