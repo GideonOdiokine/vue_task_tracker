@@ -38,7 +38,7 @@ export default {
         body: JSON.stringify(project),
       }).then(() => {
         this.$router.push("/");
-      });
+      }).catch((err)=>console.log(err))
     },
   },
 };
